@@ -2,7 +2,7 @@
 
 # smolBrain V3.0
 
-A custom PCB for SlimeVR nRF trackers (smol slimes).
+A custom PCB for SlimeVR nRF trackers (smolslimes).
 
 smolBrain is a fully integrated, 4-layer tracker board built around the nRF52833 and ICM-45686.
 
