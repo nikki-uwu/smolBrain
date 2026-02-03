@@ -110,6 +110,8 @@ Measured at 4.0 V battery input with 150 mAh LiPo (0.6 Wh):
 | Active (200 TPS) | 2.88 mA | 11.52 mW | ~52 hours |
 | Deep sleep | 13 µA | 0.052 mW | Months |
 
+![Current consumption](images/current.png)
+
 During actual use, the tracker isn't always transmitting at 200 TPS - the packet rate varies depending on how much you move, so real-world battery life will be longer than 52 hours.
 
 Overall system efficiency is approximately 78% at typical operating loads. Efficiency is measured from the battery connector point, so this is how the battery sees the entire board with charger, DCDC, LDO, and all components on it.
