@@ -12,11 +12,22 @@ For general information on SlimeVR nRF trackers, firmware flashing, pairing, and
 
 ---
 
+## Contents
+
+1. [Schematic](#1-schematic)
+2. [Hardware](#2-hardware)
+3. [Features](#3-features)
+4. [Power consumption](#4-power-consumption)
+5. [Flashing](#5-flashing)
+6. [License](#6-license)
+
+---
+
 ## 1. Schematic
 
 I tried to put as much useful information into the schematic as I could. It's not just pinouts and component values - every block has notes explaining my reasoning, the measurements I took, and why I chose the values I did. It might look a little overwhelming at first, but the idea is that for each component you can see what my thought process was. Maybe it can be useful as a learning tool if you're designing something similar. It doesn't mean everything is perfect - there could be mistakes, and if you find any, feel free to let me know.
 
-This image is just a preview to show that the schematic contains a lot of additional context. For full detail, see the [schematic PDF](Nikki_smolBrain_V3.0_schematic.pdf).
+Bellow you can see just a preview what i have inside :3 [schematic PDF](Nikki_smolBrain_V3.0_schematic.pdf).
 
 ![Schematic preview](images/Nikki_smolBrain_V3.0_schematic.png)
 
@@ -51,9 +62,9 @@ This image is just a preview to show that the schematic contains a lot of additi
 
 External TCXO at 32.768 kHz, ±10 ppm. Feeds both the nRF (LFCLK) and the IMU (CLKIN), providing accurate timing for sensor sampling and TDMA synchronization during light sleep. The TCXO is controllable via a tri-state enable pin - firmware switches it off when the board enters deep sleep to save power.
 
-TCXO current consumption is upto datahseet. ~7 uA tiwh no load, around 12 uA with 1 MOhm load and around 1.3 uA when tri-state is down.
+TCXO current consumption is upto datasheet. ~7 uA with no load connected, around 12 uA with 1 MOhm load and around 1.3 uA when tri-state is down.
 
-Since TCXO is used for nRF too - you must take care that swithing from internal RC to external sourse is done properly. At the meoment i have a custom firmware but i believe in the future it will be properly implemented on the main branch for smolSlimes.
+Since TCXO is used for nRF too - you must take care of proper switching to external and internal clock sourses. At the meoment i have a custom firmware but i believe in the future it will be properly implemented on the main branch of the smolSlimes.
 
 ### 3.2 Charger with power path and protection
 
