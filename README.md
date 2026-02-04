@@ -177,7 +177,7 @@ That is it - it should compile following docs steps.
 
 ## 6. License
 
-Copyright (c) 2026 Nikki
+Copyright (c) 2026 nikki
 
 This source describes Open Hardware and is licensed under the CERN-OHL-S v2.
 
