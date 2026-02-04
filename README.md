@@ -1,4 +1,4 @@
-![smolBrain pcb preview](images/Tracker_3D_veiw.png)
+![smolBrain pcb preview](images/is_it_better_i_dont_know.png)
 
 # Hi there! If not the tracker itself - check the schematic PDF! I have a ton of info there, could be interesting if you're searching for solutions with explanations why and how :3
 
