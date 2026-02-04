@@ -169,25 +169,13 @@ As shown in [5.3](#53-power-supply-noise), the LDO output is extremely clean - b
 
 The real question is: does the IMU sample during those dips, or does it mostly catch the flat parts?
 
-**Measurement setup**
+***Measurement setup*** - The ICM-45686 has a data ready interrupt (INT) that pulses when a new sample is ready. The actual ADC sampling should happen just before this pulse, with minimal delay. So I triggered the scope on the INT pulse and looked at what was happening on the power rail right before it - that's the window where the IMU was most likely sampling. Probing: channel C1 on the ICM VDDP pin, ground on the decoupling cap ground pad - less than a millimeter from the chip. As close to what the IMU actually sees as possible. Channel C3 on the INT pin for triggering. Persistence mode with color grading enabled - red/warm = happens often, blue/cold = happens rarely.
 
-The ICM-45686 has a data ready interrupt (INT) that pulses when a new sample is ready. The actual ADC sampling should happen just before this pulse, with minimal delay. So I triggered the scope on the INT pulse and looked at what was happening on the power rail right before it - that's the window where the IMU was most likely sampling.
+***Results (I'm so sorry, I just realized bottom of the image is corrupted T__T, scope didn't save it properly)*** - Before the INT pulse (left side of the capture), the voltage is almost always flat - the red persistence traces sit in a tight band well below 1 mV peak-to-peak. That's where the IMU samples most of the time. After the INT pulse fires and the nRF kicks in, the voltage dips by a few millivolts as current draw increases - but by then, sampling is already done. The scope stats show Pk-Pk of ~5.5 mV and Stdev of ~1.6 mV, but that includes the full capture with all the load transients. During the quiet window before sampling, it's well under 1 mV. In roughly 90-95% of cases, the IMU is sampling on an extremely flat power rail. The remaining 5-10% you can still see blue persistence traces from random nRF activity landing right before the INT pulse - sometimes the timing just lines up and there's nothing you can do about it. So yes, it technically affects the measurement, but rarely.
 
-Probing: channel C1 on the ICM VDDP pin, ground on the decoupling cap ground pad - less than a millimeter from the chip. As close to what the IMU actually sees as possible. Channel C3 on the INT pin for triggering. Persistence mode with color grading enabled - red/warm = happens often, blue/cold = happens rarely.
-
-**Results (I'm so sorry, I jsut realized bottom of the image is corrupted T__T, scope didn't save it properly)**
+***Does it matter?*** - My previous version with DCDC only was giving me about 0.04 dps gyro noise. This version with the supa clean LDO rail gives around 0.038 dps. Not a huge difference. So if you're designing your own board and you see 35-45 mVpp on a DCDC-only rail - don't stress about it. The ICM-45686 datasheet says to take action above 50 mVpp, and anything well below that is fine.
 
 ![Ripple vs IMU sampling](images/SDS824X_HD_PNG_33.png)
-
-Before the INT pulse (left side of the capture), the voltage is almost always flat - the red persistence traces sit in a tight band well below 1 mV peak-to-peak. That's where the IMU samples most of the time. After the INT pulse fires and the nRF kicks in, the voltage dips by a few millivolts as current draw increases - but by then, sampling is already done.
-
-The scope stats show Pk-Pk of ~5.5 mV and Stdev of ~1.6 mV, but that includes the full capture with all the load transients. During the quiet window before sampling, it's well under 1 mV.
-
-In roughly 90-95% of cases, the IMU is sampling on an extremely flat power rail. The remaining 5-10% you can still see blue persistence traces from random nRF activity landing right before the INT pulse - sometimes the timing just lines up and there's nothing you can do about it. So yes, it technically affects the measurement, but rarely.
-
-**Does it matter?**
-
-My previous version with DCDC only was giving me about 0.04 dps gyro noise. This version with the supa clean LDO rail gives around 0.038 dps. Not a huge difference. So if you're designing your own board and you see 35-45 mVpp on a DCDC-only rail - don't stress about it. The ICM-45686 datasheet says to take action above 50 mVpp, and anything well below that is fine.
 
 ### 5.5 IMU performance (ICM-45686)
 
