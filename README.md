@@ -165,7 +165,7 @@ For firmware flashing instructions, see: https://docs.slimevr.dev/smol-slimes/fi
 
 As for any other board we must provide to the project so called devicetree and config files. Those are needed to tell proper pins and settings for my board.
 
-First - got and grab [Board config files](firmware_files/smolBrain_rev3) and drop it right into the "boards" folder of the project. That folder contains all the pins and stuff
+First - go and grab [Board config files](firmware_files/smolBrain_rev3) and drop it right into the "boards" folder of the project. That folder contains all the pins and stuff for my board.
 
 Second - copy [this yml](firmware_files/pm_static_nikkismolbrain_r3_uf2_nrf52833.yml) to the root of the pject. you will see another similar yml files for another boards at the same place.
 
