@@ -87,7 +87,9 @@ Battery voltage sensing through a 1 MΩ / 1 MΩ voltage divider. The divider use
 
 ### 3.5 Power topology
 
-LiPo -> DCDC (3.1 V) -> LDO (2.8 V). The LDO stage produces an extremely clean power rail - below 1 mV peak-to-peak voltage ripple, plus whatever residual DC offset remains from the DCDC bias shift. This directly benefits IMU noise performance. In the scope capture below, yellow is the DCDC output (LDO input) and blue is the LDO output. The leftover ripple you see on the blue line is from the DCDC voltage bias, which depends on current consumption. The DCDC keeps its output just a bit above target when current consumption is low, so that when it spikes it doesn't drop the voltage too low. That change is too low frequency for the LDO to filter out, and it's more or less normal behavior.
+LiPo -> DCDC (3.1 V) -> LDO (2.8 V). The LDO stage produces an extremely clean power rail - below 1 mV peak-to-peak voltage ripple, plus whatever residual DC offset remains from the DCDC bias shift. This directly benefits IMU noise performance.
+
+On the scope capture below, yellow is the DCDC output (LDO input) and blue is the LDO output. The leftover ripple you see on the blue line is from the DCDC voltage bias, which depends on current consumption. The DCDC keeps its output just a bit above target when current consumption is low, so that when it spikes it doesn't drop the voltage too low. That change is too low frequency for the LDO to filter out, and it's more or less normal behavior.
 
 ![Power ripple](images/SDS824X_HD_PNG_25.png)
 
