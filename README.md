@@ -155,7 +155,7 @@ To connect the debugger, you can use a pogo pin clip - a spring-loaded clip with
 
 ### 5.3 First flash
 
-Flash the bootloader included in the root of this repository (`feather_nrf52833_express_bootloader-0.9.2_s140_7.3.0.hex`) via SWD. This only needs to be done once or if you bugged the tracker firmware somehow.
+Flash the bootloader included in the root of this repository [Adafruit Bootloader](firmware_files/feather_nrf52833_express_bootloader-0.9.2_s140_7.3.0.hex) via SWD. This only needs to be done once or if you bugged the tracker firmware somehow.
 
 ### 5.4 After first flash
 
