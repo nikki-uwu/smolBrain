@@ -20,6 +20,10 @@ I'm an engineer, but started to make PCBs only a year and a half ago (mid of 202
 
 So maybe not the tracker itself, but the description of it could be interesting to you. I'm kind of releasing it maybe not for people to make it (if you do, it will work, I use them, I've tested them, they're great :3), but maybe to learn or... to read and say - nikki is stupid. In that case, could you please send me a message or a commit? I'd love to know what's wrong :3
 
+Here is a random pic with my old versions including ESP32-C3, BNO085, LSM6DSV and nRF with ICMs. The second and third trackers from the left were commissioned by SoraKage, thanks again a lot :3
+
+![Old versions](images/random_pic_with_old_versions.jpg)
+
 ---
 
 ## Contents
