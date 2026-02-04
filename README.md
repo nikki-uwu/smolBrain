@@ -167,6 +167,12 @@ For firmware flashing instructions, see: https://docs.slimevr.dev/smol-slimes/fi
 
 Copyright (c) 2026 Nikki
 
-This hardware design is licensed under the **CERN Open Hardware Licence Version 2 - Strongly Reciprocal** ([CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt)).
+This source describes Open Hardware and is licensed under the CERN-OHL-S v2.
 
-You may use, modify, and distribute this design freely, including for commercial purposes, provided that any derivative work is made available under the same license with complete source files. All copyright and attribution notices must be preserved. See [LICENSE](LICENSE) for full terms.
+You may redistribute and modify this source and make products using it under the terms of the [CERN-OHL-S v2](https://ohwr.org/cern_ohl_s_v2.txt).
+
+This source is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the CERN-OHL-S v2 for applicable conditions.
+
+Source location: https://github.com/nikki-uwu/smolBrain
+
+As per CERN-OHL-S v2 section 4, should you produce hardware based on this source, you must where practicable maintain the source location visible on the external case of the product.
