@@ -58,7 +58,7 @@ Below you can see just a preview of what I have inside :3 [schematic PDF](Nikki_
 |-----------|------|
 | MCU | nRF52833 (QIAA, 73-pin aQFN) |
 | IMU | ICM-45686 (6-axis, SPI) |
-| TCXO | SiT1552 (32.768 kHz, ±10 ppm) |
+| TCXO | SX3M32.768KB10F20TLN (32.768 kHz, ±10 ppm) |
 | DCDC | TPS628438 (LiPo -> 3.1 V) |
 | LDO | TPS7A2028 (3.1 V -> 2.8 V) |
 | PCB | 4-layer stackup |
