@@ -9,6 +9,8 @@ A custom PCB for SlimeVR nRF trackers (smolSlimes).
 
 smolBrain is a fully integrated, 4-layer tracker board built around the nRF52833 and ICM-45686.
 
+Huge thank you to slimerVR devs and people from the official discord server 🤍. Without their help I would make nothing :3
+
 For general information on SlimeVR nRF trackers, firmware flashing, pairing, and calibration, see the official documentation: https://docs.slimevr.dev/smol-slimes/
 
 
